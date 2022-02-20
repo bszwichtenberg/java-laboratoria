@@ -1,9 +1,13 @@
+import java.util.Date;
+
 public class Human {
     public String firstName;
     public String lastName;
     public String phone;
     public Animal pet;
-    Car car;
+    public Car car;
+    private Double salary;
+
 
 
     public Human(String firstName, String lastName, String phone) {
@@ -50,5 +54,20 @@ public class Human {
 
     public void setCar(Car car) {
         this.car = car;
+    }
+
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        if(salary > 0.0) {
+            System.out.println("Nowe dane zostały wysłane do systemu księgowego.");
+            System.out.println("Odbierz aneks do umowy u pani Hani z kadr!");
+            System.out.println("ZUS i US już wiedzą o zmianie wypłaty. Nic nie ukryjesz! Mati już zaciera ręce :D");
+            this.salary = salary;
+        } else {
+            System.out.println("Wynagrodzenie nie może być ujemne!");
+        }
     }
 }
