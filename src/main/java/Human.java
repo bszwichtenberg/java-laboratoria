@@ -5,7 +5,7 @@ public class Human {
     public String lastName;
     public String phone;
     public Animal pet;
-    public Car car;
+    private Car car;
     private Double salary;
 
 
@@ -52,12 +52,8 @@ public class Human {
         return car;
     }
 
-    public void setCar(Car car) {
-        this.car = car;
-    }
-
     public Double getSalary() {
-        return salary;
+        return this.salary;
     }
 
     public void setSalary(Double salary) {
@@ -68,6 +64,19 @@ public class Human {
             this.salary = salary;
         } else {
             System.out.println("Wynagrodzenie nie może być ujemne!");
+        }
+    }
+
+    public void setCar(Car car) {
+        if(this.salary > car.value) {
+            this.car = car;
+            System.out.println("Kupiłeś samochód za gotówkę. Gratulacje!");
+        } else {
+            if(this.salary > car.value/2){
+                System.out.println("Kupiłeś auto na kredyt..." );
+            } else {
+                System.out.println("Nic z tego! Idź na studia i zmień pracę!");
+            }
         }
     }
 }

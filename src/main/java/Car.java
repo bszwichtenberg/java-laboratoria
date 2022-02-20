@@ -4,12 +4,14 @@ public class Car {
     public String model;
     public Integer manufacturingYear;
     public Double engineCapacity ;
+    public Double value;
 
-    public Car(String producer, String model, Integer manufacturingYear, Double engineCapacity) {
+    public Car(String producer, String model, Integer manufacturingYear, Double engineCapacity, Double value) {
         this.model = model;
         this.manufacturingYear = manufacturingYear;
         this.producer = producer;
         this.engineCapacity = engineCapacity;
+        this.value = value;
     }
 
     public String getProducer() {
