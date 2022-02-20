@@ -1,4 +1,4 @@
-import java.util.Date;
+import devices.Car;
 
 public class Human {
     public String firstName;
@@ -78,5 +78,17 @@ public class Human {
                 System.out.println("Nic z tego! Idź na studia i zmień pracę!");
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", pet=" + pet +
+                ", car=" + car +
+                ", salary=" + salary +
+                '}';
     }
 }

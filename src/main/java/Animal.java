@@ -36,4 +36,13 @@ public class Animal {
             System.out.println("Uśmierciłeś zwierzaka! :(");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", weight=" + weight +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

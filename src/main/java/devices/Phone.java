@@ -1,3 +1,5 @@
+package devices;
+
 public class Phone {
 
     public String producer;
@@ -42,5 +44,15 @@ public class Phone {
 
     public void setAndroidIOS(String androidIOS) {
         this.androidIOS = androidIOS;
+    }
+
+    @Override
+    public String toString() {
+        return "devices.Phone{" +
+                "producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", screenSize=" + screenSize +
+                ", androidIOS='" + androidIOS + '\'' +
+                '}';
     }
 }
