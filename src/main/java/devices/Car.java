@@ -2,11 +2,9 @@ package devices;
 
 import java.util.Objects;
 
-public class Car {
+public class Car extends Device {
 
-    public String producer;
-    public String model;
-    public Integer manufacturingYear;
+
     public Double engineCapacity ;
     public Double value;
 
@@ -18,37 +16,6 @@ public class Car {
         this.value = value;
     }
 
-    public String getProducer() {
-        return producer;
-    }
-
-    public void setProducer(String producer) {
-        this.producer = producer;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public Integer getManufacturingYear() {
-        return manufacturingYear;
-    }
-
-    public void setManufacturingYear(Integer manufacturingYear) {
-        this.manufacturingYear = manufacturingYear;
-    }
-
-    public Double getEngineCapacity() {
-        return engineCapacity;
-    }
-
-    public void setEngineCapacity(Double engineCapacity) {
-        this.engineCapacity = engineCapacity;
-    }
 
     @Override
     public String toString() {
@@ -59,6 +26,11 @@ public class Car {
                 ", engineCapacity=" + engineCapacity +
                 ", value=" + value +
                 '}';
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Brum brum bruuuuum");
     }
 
     @Override

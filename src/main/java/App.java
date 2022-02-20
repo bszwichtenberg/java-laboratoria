@@ -39,5 +39,8 @@ public class App {
         System.out.println(car.toString());
         System.out.println(person.toString());
         System.out.println(phone.toString());
+
+        car.turnOn();
+        phone.turnOn();
     }
 }

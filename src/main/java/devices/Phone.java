@@ -1,9 +1,7 @@
 package devices;
 
-public class Phone {
+public class Phone extends Device {
 
-    public String producer;
-    public String model;
     public Double screenSize;
     public String androidIOS;
 
@@ -14,37 +12,6 @@ public class Phone {
         this.androidIOS = androidIOS;
     }
 
-    public String getProducer() {
-        return producer;
-    }
-
-    public void setProducer(String producer) {
-        this.producer = producer;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public Double getScreenSize() {
-        return screenSize;
-    }
-
-    public void setScreenSize(Double screenSize) {
-        this.screenSize = screenSize;
-    }
-
-    public String getAndroidIOS() {
-        return androidIOS;
-    }
-
-    public void setAndroidIOS(String androidIOS) {
-        this.androidIOS = androidIOS;
-    }
 
     @Override
     public String toString() {
@@ -54,5 +21,10 @@ public class Phone {
                 ", screenSize=" + screenSize +
                 ", androidIOS='" + androidIOS + '\'' +
                 '}';
+    }
+
+    @Override
+    public void turnOn() {
+        System.out.println("Ring! Ring! To ja, Twój telefon!");
     }
 }
