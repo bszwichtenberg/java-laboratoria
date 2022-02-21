@@ -1,3 +1,4 @@
+import creatures.Animal;
 import devices.Car;
 
 public class Human {

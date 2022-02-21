@@ -1,4 +1,6 @@
-public class Animal {
+package creatures;
+
+public abstract class Animal implements Feedable{
 
     public final String species;
     private Double weight;
@@ -39,10 +41,17 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "creatures.Animal{" +
                 "species='" + species + '\'' +
                 ", weight=" + weight +
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    @Override
+    public void feed(double foodWeight) {
+        System.out.println("Zjadłem tyyle jedzenia: " + foodWeight);
+        this.weight += foodWeight;
+    }
+
 }

@@ -1,19 +1,13 @@
+import creatures.*;
 import devices.Car;
 import devices.Phone;
 
 public class App {
     public static void main(String[] args) {
 
-        Animal pet = new Animal("Cat", "Felek");
+        Feedable pet = new Pet("Cat", "Felek");
 
-        pet.feed();
-        pet.takeForAWalk();
-        pet.takeForAWalk();
-        pet.takeForAWalk();
-        pet.takeForAWalk();
-        pet.takeForAWalk();
-        pet.takeForAWalk();
-        pet.takeForAWalk();
+
         pet.feed();
 
         Human person = new Human("Adam", "Kowalski","690-123-123");
@@ -42,5 +36,14 @@ public class App {
 
         car.turnOn();
         phone.turnOn();
+
+        pet.feed(2.5);
+
+        pet.feed();
+
+        Edible pig = new FarmAnimal("pig", "Babe");
+
+        pig.beEaten();
+
     }
 }
