@@ -1,49 +1,33 @@
-import creatures.*;
-import devices.Car;
-import devices.Phone;
+import devices.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
 
-        Feedable pet = new Pet("Cat", "Felek");
+    Phone phone = new Phone("Samsung", "A5",15.0, "Android");
+    URL url = new URL("NewApp","1.044", "donotinstallthis.com");
+    phone.installAnnApp(url);
+    phone.installAnApp("Bardzo kiepska aplikacja");
+    phone.installAnApp("jescze gorsza aplikacja","1.2");
+    phone.installAnnApp("nie chcesz tego instalować","2.34","najgorsze-apki.com");
 
+    ArrayList<String> installList = new ArrayList();
+    installList.add("JakaśKiepskaAplikacja");
+    installList.add("Kalendarz");
+    installList.add("BeFit");
 
-        pet.feed();
+    phone.installAnnApp(installList);
 
-        Human person = new Human("Adam", "Kowalski","690-123-123");
-        Car car = new Car("Alfa Romeo","159",2010,2.0, 25000.00);
+    Car diesel = new Diesel("VW","Golf",2000,1.0, 3000.0);
+    diesel.refuel();
 
+    Car electric = new Electric("tesla","X",2020, 1.0,10000.0);
+    electric.refuel();
 
-        person.setSalary(15000.00);
-
-        person.setCar(car);
-
-        Car car2 = new Car("Fiat","multipla",1990,1.0, 1000.0);
-        person.setCar(car2);
-
-        Car car3 = new Car("Fiat", "multipla", 1990, 1.0, 1000.0);
-
-        Phone phone = new Phone("Samsung", "A5", 15.0, "Android");
-
-
-        System.out.println(pet);
-        System.out.println(car2.equals(car3));
-
-        System.out.println(pet.toString());
-        System.out.println(car.toString());
-        System.out.println(person.toString());
-        System.out.println(phone.toString());
-
-        car.turnOn();
-        phone.turnOn();
-
-        pet.feed(2.5);
-
-        pet.feed();
-
-        Edible pig = new FarmAnimal("pig", "Babe");
-
-        pig.beEaten();
+    Car lpg = new LPG("Fiat", "Panda", 2008, 1.8, 5000.0);
+    lpg.refuel();
 
     }
 }

@@ -2,7 +2,7 @@ package devices;
 
 import java.util.Objects;
 
-public class Car extends Device {
+public abstract class Car extends Device {
 
 
     public Double engineCapacity ;
@@ -49,4 +49,6 @@ public class Car extends Device {
     public int hashCode() {
         return Objects.hash(producer, model, manufacturingYear, engineCapacity, value);
     }
+
+    public abstract void refuel();
 }
