@@ -3,7 +3,7 @@ public class Human {
     public String lastName;
     public String phone;
     public Animal pet;
-    Car car;
+    public Car car;
 
 
     public Human(String firstName, String lastName, String phone) {

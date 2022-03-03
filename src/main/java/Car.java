@@ -12,35 +12,4 @@ public class Car {
         this.engineCapacity = engineCapacity;
     }
 
-    public String getProducer() {
-        return producer;
-    }
-
-    public void setProducer(String producer) {
-        this.producer = producer;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public Integer getManufacturingYear() {
-        return manufacturingYear;
-    }
-
-    public void setManufacturingYear(Integer manufacturingYear) {
-        this.manufacturingYear = manufacturingYear;
-    }
-
-    public Double getEngineCapacity() {
-        return engineCapacity;
-    }
-
-    public void setEngineCapacity(Double engineCapacity) {
-        this.engineCapacity = engineCapacity;
-    }
 }
