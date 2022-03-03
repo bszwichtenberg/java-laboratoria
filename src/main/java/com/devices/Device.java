@@ -1,6 +1,9 @@
-package devices;
+package com.devices;
 
-public abstract class Device {
+import com.Human;
+import com.Selleable;
+
+public abstract class Device implements Selleable {
 
     public String producer;
     public String model;
@@ -16,5 +19,7 @@ public abstract class Device {
     }
 
     public abstract void turnOn();
+
+    public abstract void sell(Human seller, Human buyer, Double price);
 }
 

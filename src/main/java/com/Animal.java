@@ -1,4 +1,6 @@
-public class Animal {
+package com;
+
+public class Animal implements Selleable {
 
     public final String species;
     private Double weight;
@@ -39,10 +41,29 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "com.Animal{" +
                 "species='" + species + '\'' +
                 ", weight=" + weight +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if(seller.getPet() != null && seller.getPet().equals(this)){
+            if(buyer.getCash() != null && buyer.getCash() >= price) {
+                buyer.setCash(buyer.getCash() - price);
+                seller.setCash(seller.cash + price);
+                seller.setPet(null);
+                buyer.setPet(this);
+                System.out.println("Zwierzę zostało sprzedane");
+                System.out.println("Stan konta sprzedającego po transakcji: " + seller.getCash());
+                System.out.println("Stan konta kupującego po transakcji: " + buyer.getCash());
+            } else {
+                System.out.println("Kupujący nie posiada odpowiednich środków, żeby zrealizować transakcję");
+            }
+        } else {
+            System.out.println("Nie można sprzedać zwierzęcia, bo sprzedający nie jest jego właścicielem!");
+        };
     }
 }
